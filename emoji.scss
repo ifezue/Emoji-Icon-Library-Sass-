@@ -1,0 +1,46 @@
+span{
+  display: inline-block;
+}
+$emojicons: (
+   emojicon__tearsjoy : 😂,
+   emojicon__hearteyes : 😍,
+   emojicon__thinking : 🤔,
+   emojicon__grinning : 😀,
+   emojicon__blush : 😊,
+   emojicon__wink : 😉,
+   emojicon__shykiss : 😗,
+   emojicon__boldkiss : 😙,
+   emojicon__superkiss : 😚,
+   emojicon__donekissing : 😋,
+   emojicon__smilingnotsmiling : 🙂,
+   emojicon__eyesroll : 🙄,
+   emojicon__hugs : 🤗,
+   emojicon__heart : 💖,
+   emojicon__fire : 🔥
+ );
+
+@each $name, $emoji in $emojicons {
+  .#{$name}::after {
+    align-items: center;
+    content: '#{$emoji}';
+    display: flex;
+    height: 30px;
+    justify-content: center;
+    width: 30px;
+  }
+
+  .#{$emoji}::after {
+    align-items: center;
+    content: '#{$emoji}';
+    display: flex;
+    height: 30px;
+    justify-content: center;
+    width: 30px;
+  }
+}
+
+.hero{
+  .header{
+    width: 100%;
+  }
+}
